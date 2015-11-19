@@ -939,8 +939,8 @@ row.cellConfig.setObject(NSDate(), forKey: "maximumDate")
 
 #### How to disable the entire form (read only mode).
 
-`disable` XLFormDescriptor property can be used to disable the entire form. In order to make the displayed cell to take effect we should reload the visible cells ( [self.tableView reloadData] ).
-Any other row added after form `disable` property is set to `YES` will reflect the disable mode automatically (no need to reload table view).
+`disabled` XLFormDescriptor property can be used to disable the entire form. In order to make the displayed cell to take effect we should reload the visible cells ( [self.tableView reloadData] ).
+Any other row added after form `disabled` property is set to `YES` will reflect the disable mode automatically (no need to reload table view).
 
 #### How to hide a row or section when another rows value changes.
 
@@ -1055,7 +1055,7 @@ Version 3.0.1
 
 Version 3.0.0
 
-* `hidden`, `disable` properties added to `XLFormRowDescriptor`. `@YES` `@NO` or a `NSPredicate` can be used to hide, disable de row.
+* `hidden`, `disabled` properties added to `XLFormRowDescriptor`. `@YES` `@NO` or a `NSPredicate` can be used to hide, disable the row.
 * `hidden` property added to `XLFormSectionDescriptor`. `@YES` `@NO` or a `NSPredicate` can be used to hide the section.
 * Added `XLFormRowDescriptorTypeCountDownTimerInline` and `XLFormRowDescriptorTypeCountDownTimer` row type with an example.
 * Deleted `dateFormatter` property and added support to use the `NSValueTransformer` to convert the selected object to a NSString in the XLFormDateCell class.
@@ -1086,7 +1086,7 @@ Version 2.2.0
 * Added support for inputAccessoryView. Default input accessory view allows to navigate among rows. Fully optionally and customizable.
 * Added suport for row navigation. Fully optionally and customizable.
 * beginEditing: endEditing: methods added. These method are called each time a row gains / loses firstResponder. They bring the ability to do UI changes.
-* Read Only mode added. `disable` property added to XLFormDescriptor class.
+* Read Only mode added. `disabled` property added to XLFormDescriptor class.
 * Rename `label` XLFormTextViewCell property as `textLabel`.
 * fix position of multivalued section accessory view.
 * Can delete, can delete, can reorder section mode added. it's possible to enable some of them, don't need to enable all modes.
